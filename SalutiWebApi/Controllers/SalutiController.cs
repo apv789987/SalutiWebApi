@@ -11,21 +11,21 @@ namespace SalutiWebApi.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         public IActionResult TestConnex()
         {
-            return Ok(new InfoMsg("101", $"Saluti sono la tua prima web api csharp in Azure App Services"));
+            return Ok(new InfoMsg("101", $"Ciao, sono la tua prima web api csharp in Azure App Services"));
         }
 
         [HttpGet("{Nome}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         public ActionResult<InfoMsg> getSaluti2(string Nome)
         {
-            return Ok(new InfoMsg("101", $"Saluti {Nome}, sono la tua web api csharp in Azure App Services"));
+            return Ok(new InfoMsg("101", $"Ciao {Nome}, sono la tua web api csharp in Azure App Services"));
         }
 
         [HttpGet("{Nome}/{version}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         public ActionResult<InfoMsg> getSaluti3(string Nome, string version)
         {
-            return Ok(new InfoMsg("101", $"Saluti {Nome}, sono la versione {version} della web api"));
+            return Ok(new InfoMsg("101", $"Ciao {Nome}, sono la versione {version} della web api"));
         }
     }
 }

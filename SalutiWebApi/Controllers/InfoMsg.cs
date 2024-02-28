@@ -4,11 +4,13 @@
     {
         public string Code { get; set; }
         public string Message { get; set; }
+        public string Date { get; set; }  
 
-        public InfoMsg(string Code, String Message)
+        public InfoMsg(string code, String message)
         {
-            this.Code = Code;
-            this.Message = Message;
+            this.Code = code;
+            this.Message = message;
+            this.Date = DateTime.Now.ToString();
         }
     }
 }

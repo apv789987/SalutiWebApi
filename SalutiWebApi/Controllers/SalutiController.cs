@@ -16,16 +16,18 @@ namespace SalutiWebApi.Controllers
 
         [HttpGet("{Nome}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        public ActionResult<InfoMsg> getSaluti2(string Nome)
+        public ActionResult<InfoMsg> getSaluti2(string nome)
         {
-            return Ok(new InfoMsg("101", $"Ciao {Nome}, sono la tua web api csharp in Azure App Services"));
+            string data = DateTime.Now.ToString();
+            return Ok(new InfoMsg("101", $"Ciao {nome}, sono la tua Web Api richiamata in data {data} con Azure App Services"));
         }
 
         [HttpGet("{Nome}/{version}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        public ActionResult<InfoMsg> getSaluti3(string Nome, string version)
+        public ActionResult<InfoMsg> getSaluti3(string nome, string versione)
         {
-            return Ok(new InfoMsg("101", $"Ciao {Nome}, sono la versione {version} della web api"));
+            string data = DateTime.Now.ToString();
+            return Ok(new InfoMsg("101", $"Ciao {nome}, sono la versione {versione} richiamata in data {data} della Web Api"));
         }
     }
 }
